@@ -1,0 +1,6 @@
+= dr_dre - diagnose Double Render Errors in Rails apps
+
+dr_dre intercepts calls to render and redirect in ActionController and, if it 
+detects multiple calls to render or redirect (triggering a DoubleRenderError),
+will drop a couple of lines into the output log identifying where the redirect
+or render calls were made from.
