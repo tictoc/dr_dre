@@ -19,9 +19,18 @@ module DrDre
 	end
 
 	def log_dre
-		logger.info("\ndr_dre: your application has called render or redirect_to more than once!")
-		logger.info( @dr_dre_call_log.map{|c| "Called from: #{c}"}.join("\n")	)
-	end
 		
+		# Log the error
+		error = []
+		error << "dr_dre: your application has called render or redirect_to more than once!"
+		error += @dr_dre_call_log.map{|c| "Called from: #{c}"}
+
+		logger.info "\n" + error.join("\n")
+		
+		# Do a custom exception message
+		raise DoubleRenderError, error.join("\n")
+		
+	end
+			
 end
 
