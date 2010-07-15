@@ -2,12 +2,12 @@ module DrDre
 	
 	def redirect_to(*params)
 		log_if_dre
-		super(params)
+		super(*params)
 	end
 
 	def render(*params)
 		log_if_dre
-		super(params)
+		super(*params)
 	end
 	
 	private
