@@ -28,7 +28,7 @@ module DrDre
 		logger.info "\n" + error.join("\n")
 		
 		# Do a custom exception message
-		raise DoubleRenderError, error.join("\n")
+		raise ActionController::DoubleRenderError, error.join("\n")
 		
 	end
 			
