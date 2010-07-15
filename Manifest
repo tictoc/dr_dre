@@ -2,5 +2,6 @@ LICENCE
 Manifest
 README
 Rakefile
+gem-public_cert.pem
 lib/dr_dre.rb
 lib/dr_dre/dr_dre.rb
